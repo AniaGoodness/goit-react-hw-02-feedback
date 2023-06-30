@@ -1,6 +1,6 @@
-import { nanoid } from "nanoid"
+/* import { nanoid } from "nanoid"
 
-const variants = [
+export const variants = [
     {
         id: nanoid(),
         name: 'Good',
@@ -20,4 +20,4 @@ const variants = [
     }
 ]
 
-export default variants;
+export default variants;*/

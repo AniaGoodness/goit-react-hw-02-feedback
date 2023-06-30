@@ -3,19 +3,19 @@ import { FeedbackChoice } from './FeedbackChoice/FeedbackChoice';
 import Statistics from "./Statistics/Statistics";
 import Section from "./Section/Section";
 
-import variants from "data/ButtonVariants";
-
-
-export default class App extends Component {
-  state = {
+export class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       good: 0,
       neutral: 0,
       bad: 0
+    };
   }
   
   countTotalFeedback = () => this.state.good + this.state.neutral + this.state.bad;
 
- clickHandler = (type) => {
+  clickHandler = (type) => {
     this.setState(
       prevState => ({
         [type]: prevState[type] + 1
@@ -27,11 +27,11 @@ export default class App extends Component {
   render () {
 
     return (
-      <>
+      <div>
         <Section title='Please leave feedback'>
 
           <FeedbackChoice 
-            variants = {variants}
+
             onLeaveFeedback = {this.clickHandler}
           />
         
@@ -42,7 +42,7 @@ export default class App extends Component {
           />
 
         </Section>
-      </> 
+      </div> 
       
     )
   }
