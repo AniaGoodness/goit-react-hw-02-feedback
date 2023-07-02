@@ -1,3 +1,21 @@
-.button {
-    background-color: bisque;
+.statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.statisticsList {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.statisticsLabel {
+  font-size: 20px;
+
+
+}
+.statisticsValue {
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 5px;
+
 }
